@@ -9,11 +9,11 @@ import asyncio, datetime, time
 ACCEPTED_TEXT = "Hey {user}\n\nYour Request For {chat} Is Accepted ✅"
 START_TEXT = "Hai {}\n\nI am Auto Request Accept Bot With Working For All Channel. Add Me In Your Channel To Use"
 
-API_ID = int(env.get('API_ID'))
-API_HASH = env.get('API_HASH')
-BOT_TOKEN = env.get('BOT_TOKEN')
-DB_URL = env.get('DB_URL')
-ADMINS = int(env.get('ADMINS'))
+API_ID = int(environ.get('API_ID', '23789353'))
+API_HASH = environ.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6111248503:AAGaXvVz8MlSB8uwc63m_pIRuxxLNV5ctis')
+DB_URL = env.get('DB_URL', "mongodb+srv://mvmpre:mvmpre@cluster0.vzaeiqm.mongodb.net/?retryWrites=true&w=majority")
+ADMINS = int(env.get('ADMINS', '1746132193'))
 
 Dbclient = AsyncIOMotorClient(DB_URL)
 Cluster = Dbclient['Cluster0']
@@ -27,8 +27,8 @@ async def start_handler(c, m):
     user_id = m.from_user.id
     if not await Data.find_one({'id': user_id}): await Data.insert_one({'id': user_id})
     button = [[        
-        InlineKeyboardButton('Updates', url='https://t.me/mkn_bots_updates'),
-        InlineKeyboardButton('Support', url='https://t.me/MKN_BOTZ_DISCUSSION_GROUP')
+        InlineKeyboardButton('🔔 Updates 🔔', url='https://t.me/MvM_Links'),
+        InlineKeyboardButton('⚧️ Support ⚧️', url='https://t.me/MvM_Links')
     ]]
     return await m.reply_text(text=START_TEXT.format(m.from_user.mention), disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(button))
           
