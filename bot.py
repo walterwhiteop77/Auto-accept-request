@@ -16,7 +16,7 @@ DB_URL = env.get('DB_URL', "mongodb+srv://qwerty:qwerty12345@cluster0.lk2b2vo.mo
 ADMINS = int(env.get('ADMINS', '1746132193'))
 
 Dbclient = AsyncIOMotorClient(DB_URL)
-Cluster = Dbclient['Cluster1']
+Cluster = Dbclient['Cluster0']
 Data = Cluster['users']
 Bot = Client(name='AutoAcceptBot', api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
        
