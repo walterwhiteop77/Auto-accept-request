@@ -13,7 +13,7 @@ API_ID = int(env.get('API_ID', '23789353'))
 API_HASH = env.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
 BOT_TOKEN = env.get('BOT_TOKEN', '6431931732:AAEVsvIpEpfKjdg2bU4_4164oN8D3UjRxTw')
 DB_URL = env.get('DB_URL', "mongodb+srv://Autoaccept:auto123@cluster0.7jq0xrn.mongodb.net/?retryWrites=true&w=majority")
-ADMINS = int(env.get('ADMINS', '1746132193 823191583'))
+ADMINS = int(env.get('ADMINS', '1746132193, 823191583'))
 
 Dbclient = AsyncIOMotorClient(DB_URL)
 Cluster = Dbclient['Cluster0']
