@@ -12,7 +12,7 @@ START_TEXT = "Hai {}\n\nI am Auto Request Accept Bot With Working For All Channe
 API_ID = int(env.get('API_ID', '23789353'))
 API_HASH = env.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
 BOT_TOKEN = env.get('BOT_TOKEN', '6111248503:AAGaXvVz8MlSB8uwc63m_pIRuxxLNV5ctis')
-DB_URL = env.get('DB_URL', "mongodb+srv://Autoaccept:auto123@cluster0.7jq0xrn.mongodb.net/?retryWrites=true&w=majority")
+DB_URL = env.get('DB_URL', "mongodb+srv://jksha2024:jksha2024@cluster0.n6bdrv8.mongodb.net/?retryWrites=true&w=majority")
 ADMINS = int(env.get('ADMINS', '823191583'))
 
 Dbclient = AsyncIOMotorClient(DB_URL)
