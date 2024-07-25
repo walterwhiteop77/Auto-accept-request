@@ -5,7 +5,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from os import environ as env
 import asyncio, datetime, time
 
-
+id_pattern = re.compile(r'^.\d+$')
 ACCEPTED_TEXT = "Hey {user}\n\nYour Request For {chat} Is Accepted ✅"
 START_TEXT = "Hai {}\n\nI am Auto Request Accept Bot With Working For All Channel. Add Me In Your Channel To Use"
 
