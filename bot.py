@@ -13,8 +13,7 @@ API_ID = int(env.get('API_ID', '23789353'))
 API_HASH = env.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
 BOT_TOKEN = env.get('BOT_TOKEN', '6573399998:AAHvZbhwRP9aNBPYrBWYEzumkI5mIgiXq6A')
 DB_URL = env.get('DB_URL', "mongodb+srv://jksha2024:jksha2024@cluster0.n6bdrv8.mongodb.net/?retryWrites=true&w=majority")
-ADMINS = [int(env.get('ADMINS', '1746132193 1353275714')).split()]
-
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1353275714 1746132193').split()]
 Dbclient = AsyncIOMotorClient(DB_URL)
 Cluster = Dbclient['Cluster0']
 Data = Cluster['users']
