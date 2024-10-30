@@ -27,8 +27,8 @@ async def start_handler(c, m):
     user_id = m.from_user.id
     if not await Data.find_one({'id': user_id}): await Data.insert_one({'id': user_id})
     button = [[        
-        InlineKeyboardButton('🔔 Updates 🔔', url='https://t.me/MvM_Links'),
-        InlineKeyboardButton('⚧️ Support ⚧️', url='https://t.me/MvM_Links')
+        InlineKeyboardButton('🔔 Add To Channel 🔔', url='http://t.me/auto_join_requests_accept_bot?startchannel=maeve_324&admin=invite_users+manage_chat'),
+        InlineKeyboardButton('⚧️ Add To Group ⚧️', url='https://t.me/auto_join_requests_accept_bot?startgroup=maeve_324&admin=invite_users+manage_chat')
     ]]
     return await m.reply_text(text=START_TEXT.format(m.from_user.mention), disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(button))
           
