@@ -13,7 +13,7 @@ START_TEXT = "Hai {}\n\nI am Auto Request Accept Bot With Working For All Channe
 API_ID = int(env.get('API_ID', '23685822'))
 API_HASH = env.get('API_HASH', 'ff0572e13ff2f63a50f6dc707e0c4c9f')
 BOT_TOKEN = env.get('BOT_TOKEN', '')
-DB_URL = env.get('DB_URL', "mongodb+srv://Leviabcd:ier0meF7YWQ2TaYH@cluster0.0cvcei0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URL = env.get('DB_URL', "mongodb+srv://Leviabcd:VL0RUYZHI0xrwDvz@cluster0.0cvcei0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in env.get('ADMINS', '1018033649').split()]
 Dbclient = AsyncIOMotorClient(DB_URL)
 Cluster = Dbclient['Cluster0']
