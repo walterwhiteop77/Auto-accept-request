@@ -5,8 +5,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from os import environ as env
 import asyncio, datetime, time
 import re
-import os
-os.environ["PYROGRAM_IGNORE_MISSED_UPDATES"] = "1"
 
 id_pattern = re.compile(r'^.\d+$')
 ACCEPTED_TEXT = "Hey {user}\n\nYour Request For {chat} Is Accepted ✅"
