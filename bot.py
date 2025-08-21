@@ -10,11 +10,11 @@ id_pattern = re.compile(r'^.\d+$')
 ACCEPTED_TEXT = "Hey {user}\n\nYour Request For {chat} Is Accepted ✅"
 START_TEXT = "Hai {}\n\nI am Auto Request Accept Bot With Working For All Channel. Add Me In Your Channel To Use"
 
-API_ID = int(env.get('API_ID', '23789353'))
-API_HASH = env.get('API_HASH', 'fcc7f1c8b86d3e2062218a24b617e23d')
-BOT_TOKEN = env.get('BOT_TOKEN', '6573399998:AAETBDJDRF_yB-Kgd5FLq9k2d0tvFld0A74')
-DB_URL = env.get('DB_URL', "mongodb+srv://jksha2024:jksha2024@cluster0.n6bdrv8.mongodb.net/?retryWrites=true&w=majority")
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in env.get('ADMINS', '1353275714 1746132193').split()]
+API_ID = int(env.get('API_ID', '23685822'))
+API_HASH = env.get('API_HASH', 'ff0572e13ff2f63a50f6dc707e0c4c9f')
+BOT_TOKEN = env.get('BOT_TOKEN', '')
+DB_URL = env.get('DB_URL', "mongodb+srv://Leviabcd:ier0meF7YWQ2TaYH@cluster0.0cvcei0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in env.get('ADMINS', '1018033649').split()]
 Dbclient = AsyncIOMotorClient(DB_URL)
 Cluster = Dbclient['Cluster0']
 Data = Cluster['users']
